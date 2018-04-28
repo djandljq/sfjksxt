@@ -1,0 +1,89 @@
+.coffee_buy {
+  &_title {
+  }
+  &_info {
+    background-color: #ffffff;
+    &_item {
+      padding: 0.2rem;
+      border-bottom: 0.01rem solid #efefef;
+      &_img {
+        float: left;
+        width: 2.2rem;
+        height: 2rem;
+      }
+      &_left {
+        color: #666666;
+        font-size: 0.2rem;
+        margin-left: 0.2rem;
+        line-height: 0.6rem;
+        display: inline-block;
+        &_title {
+          color: #000000;
+          font-size: 0.3rem;
+        }
+      }
+      &_right {
+        float: right;
+        text-align: right;
+        color: #F67777;
+        &_price {
+          line-height: 0.6rem;
+        }
+      }
+    }
+    &_quantity {
+      color: #555555;
+      padding: 0.2rem;
+      border-bottom: 0.01rem solid #efefef;
+      .left {
+        float: left;
+        font-size: 0.35rem;
+        line-height: 0.5rem;
+      }
+      .right {
+        float: right;
+      }
+    }
+    &_unit_price {
+      color: #555555;
+      padding: 0.2rem;
+      line-height: 0.5rem;
+      border-bottom: 0.01rem solid #efefef;
+      .left {
+        float: left;
+        font-size: 0.3rem;
+      }
+      .right {
+        float: right;
+        color: #F67777;
+      }
+    }
+    &_total_price {
+      padding: 0.2rem;
+      text-align: right;
+      .right {
+        color: #F67777;
+      }
+    }
+    &_submit {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      margin-bottom: 0;
+      .price {
+        color: #F67777;
+        font-weight: bold;
+      }
+      .button {
+        color: #FFFFFF;
+        width: 4rem;
+        text-align: center;
+        line-height: 1rem;
+        font-size: 0.35rem;
+        font-weight: bold;
+        margin-right: -0.23rem;
+        background-color: #FF7D00;
+      }
+    }
+  }
+}

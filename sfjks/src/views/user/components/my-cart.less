@@ -1,0 +1,46 @@
+.my_cart {
+  &_title {
+
+  }
+  &_list {
+    padding: 0.2rem;
+    &_item {
+      &_img {
+        width: 2rem;
+        height: 2rem;
+        border: 0.01rem solid #efefef;
+      }
+      &_title {
+        font-size: 0.35rem;
+        line-height: 0.5rem;
+      }
+      &_info {
+        &_price {
+          line-height: 0.5rem;
+          color: #F67777;
+        }
+      }
+    }
+  }
+  &_submit {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 0;
+    border-top: 0.01rem solid #efefef;
+    .price {
+      color: #F67777;
+      font-weight: bold;
+    }
+    .button {
+      color: #FFFFFF;
+      width: 4rem;
+      text-align: center;
+      line-height: 1rem;
+      font-size: 0.35rem;
+      font-weight: bold;
+      margin-right: -0.23rem;
+      background-color: #FF7D00;
+    }
+  }
+}
