@@ -11,11 +11,11 @@
         2018年3月份贵州省安顺市司法局第二阶段刑事与行政法律制度
     </div>
     <div class="identity">
-      <p>姓名:&nbsp;&nbsp;<span>考试者</span></p>
+      <p>姓名:&nbsp;&nbsp;<span>{{username}}</span></p>
       <p>总分:&nbsp;&nbsp;<span>100分</span></p>
       <p>考试时间:&nbsp;&nbsp;<span>90分钟</span></p>
     </div>
-    <div class="open">
+    <div class="open" @click="getInto">
       <p>进入考试</p>
     </div>
        <!--完善个人资料弹框-->
@@ -32,13 +32,15 @@
       </div>
     </div>
       <!--温馨提示弹框-->
-    <div class="reminder heidDiv">
+    <div class="reminder heidDiv" v-show="showReminder">
       <div class="reminder_inShow" v-for="(inTo, key) in reminder" :key="key">
         <div class="reminder_inShow_title">{{inTo.title}}</div>
         <div class="reminder_inShow_content">{{inTo.content}}</div>
-        <div class="reminder_inShow_gitInto">
-          <p class="reminder_inShow_gitInto_notToEnter">{{inTo.notToEnter}}</p>
-          <p class="reminder_inShow_gitInto_enter">{{inTo.enter}}</p>
+        <div class="gitInto">
+          <p class="notToEnter" @click="getInto">{{inTo.notToEnter}}</p>
+          <p class="enter notToEnter">
+            <router-link to="/testPaper">{{inTo.enter}}</router-link>
+          </p>
         </div>
       </div>
     </div>
@@ -62,7 +64,9 @@ export default {
   data () {
     return {
       tabActive: 'examination',
-      showFlag: false,
+      showFlag: true,
+      showReminder: false,
+      username: localStorage.username,
       reminder: [
         {
           title: '温馨提示',
@@ -76,6 +80,9 @@ export default {
   methods: {
     popup () {
       this.showFlag = !this.showFlag;
+    },
+    getInto () {
+      this.showReminder = !this.showReminder;
     }
   }
 };

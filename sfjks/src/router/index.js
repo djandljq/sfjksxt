@@ -54,34 +54,10 @@ export default new Router({
       component: () => import('@/views/user/components/my-cart.vue')
     },
     {
-      path: '/ticket',
-      name: 'ticket',
-      title: '门票',
-      component: () => import('@/views/ticket/ticket.vue')
-    },
-    {
-      path: '/ticket/info/:id',
-      name: 'ticket-info',
-      title: '门票详情',
-      component: () => import('@/views/ticket/components/ticket-info.vue')
-    },
-    {
-      path: '/ticket/buy/:id/:sn',
-      name: 'ticket-buy',
-      title: '门票确认订单',
-      component: () => import('@/views/ticket/components/ticket-buy.vue')
-    },
-    {
-      path: '/ticket/order/:sn',
-      name: 'ticket-order',
-      title: '门票订单详情',
-      component: () => import('@/views/ticket/components/ticket-order.vue')
-    },
-    {
-      path: '/ticket/refund/:sn',
-      name: 'ticket-refund',
-      title: '退款详情',
-      component: () => import('@/views/ticket/components/ticket-refund.vue')
+      path: '/testPaper',
+      name: 'testPaper',
+      title: '试卷',
+      component: () => import('@/views/testPaper/testPaper.vue')
     },
     {
       path: '/hotel',

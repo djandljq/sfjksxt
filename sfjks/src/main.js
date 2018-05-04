@@ -14,7 +14,9 @@ Vue.use(YDUI);
 Vue.prototype.$qs = qs;
 Vue.prototype.$axios = axios;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded';
 Vue.config.productionTip = false;
+axios.defaults.withCredentials = true;
 
 /* eslint-disable no-new */
 new Vue({

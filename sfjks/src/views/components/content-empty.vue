@@ -1,6 +1,9 @@
 <template>
-  <div class="content_empty">
-    <img class="empty_img" src="../../assets/images/empty.png" alt="暂无内容">
+  <div class="notice" style="display:none;">
+    <div class="notice_book">
+      <img src="../../assets/images/icon_wukaostubiao.png" />
+    </div>
+    <p>你好，暂无考试，考试时间可以请看公告或者等到通知</p>
   </div>
 </template>
 
@@ -11,14 +14,26 @@ export default {
 </script>
 
 <style scoped>
-  .content_empty {
-    height: 10rem;
-    line-height: 10rem;
-    text-align: center;
-  }
-  .content_empty > .empty_img {
-    height: 3.5rem;
-    display: inline-block;
-    vertical-align: middle;
-  }
+.notice{
+    width: 100%;
+    height: 92%;
+    background: #fff;
+      &_book{
+        width: 3.52rem;
+        height: 2.13rem;
+        margin: 1.28rem auto 0.53rem;
+          img{
+              width: 100%;
+              display: block;
+          }
+      }
+    p{
+      width: 80%;
+      line-height: 0.48rem;
+      margin: 0 auto;
+      font-size: 0.32rem;
+      font-weight: bold;
+      color: #666666;
+    }
+}
 </style>
